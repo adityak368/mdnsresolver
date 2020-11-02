@@ -73,11 +73,11 @@ Using [Ego Server](https://github.com/adityak368/ego/server):
 ```go
 
 import (
-	"github.com/adityak368/ego/registry"
-	"github.com/adityak368/ego/registry/mdns"
+    "github.com/adityak368/ego/registry"
+    "github.com/adityak368/ego/registry/mdns"
     "github.com/adityak368/ego/server"
     grpcServer "github.com/adityak368/ego/server/grpc"
-	"google.golang.org/grpc"
+    "google.golang.org/grpc"
 )
 
 service := "MyApp"
