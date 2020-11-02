@@ -1,4 +1,4 @@
-package mdns
+package mdnsresolver
 
 import (
 	"context"
