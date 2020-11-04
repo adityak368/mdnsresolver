@@ -6,12 +6,16 @@ Grpc MDNS Resolver
 - Useful when developing microservices locally for service discovery.
 - It comes with a small ~250 LOC mdns client to find service endpoints. Therefore it won't bloat your binaries.
 
+[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/adityak368/mdnsresolver) [![Go Report Card](https://goreportcard.com/badge/github.com/adityak368/mdnsresolver)](https://goreportcard.com/report/github.com/adityak368/mdnsresolver)
+
 ### USAGE
 
 ```go
-
 // Import the module
-import "github.com/adityak368/mdnsresolver"
+import (
+    "github.com/adityak368/mdnsresolver"
+    "google.golang.org/grpc"
+)
 
 // if schema is 'mdns' then grpc will use mdnsresolver to resolve addresses
 cc, err := grpc.Dial("mdns://service/serviceInstanceName.domain", grpc.WithResolvers(mdnsresolver.NewBuilder()))
@@ -109,4 +113,5 @@ if !ok {
 if err := srv.Run(); err != nil {
     log.Fatal(err)
 }
+
 ```
