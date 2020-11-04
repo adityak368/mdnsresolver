@@ -72,7 +72,7 @@ defer reg.CancelWatch()
 
 ```
 
-Using [Ego Server](https://github.com/adityak368/ego/server):
+Using [Ego Server](https://github.com/adityak368/ego):
 
 ```go
 
